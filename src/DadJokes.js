@@ -12,7 +12,7 @@ export default class DadJokes extends Component {
 
     this.state = {
       loading: true,
-      jokes: []
+      jokes: [],
     };
 
     this.handleNewJokeButtonClick = this.handleNewJokeButtonClick.bind(this);
@@ -30,6 +30,9 @@ export default class DadJokes extends Component {
       console.log("Error = " + e);
     }
 
+    console.log("Checking localstorage....");
+    console.log("savedJokes.length=" + savedJokes.length);
+
     if (savedJokes.length === 0) {
       console.log("savedJokes = NULL  ");
       this.makeRequest(0);
@@ -37,7 +40,7 @@ export default class DadJokes extends Component {
       console.log("savedJokes length = " + savedJokes.length);
       this.setState({
         jokes: savedJokes,
-        loading: false
+        loading: false,
       });
     }
   }
@@ -57,7 +60,7 @@ export default class DadJokes extends Component {
     let setOfUniqueIds;
 
     setOfUniqueIds = Array.from(
-      jokeSet.map(item => {
+      jokeSet.map((item) => {
         return item.id;
       })
     );
@@ -69,7 +72,7 @@ export default class DadJokes extends Component {
     const config = {
       method: "get",
       url: "https://icanhazdadjoke.com/",
-      headers: { Accept: "application/json" }
+      headers: { Accept: "application/json" },
     };
 
     console.log("jokeSet.length = " + jokeSet.length);
@@ -82,7 +85,7 @@ export default class DadJokes extends Component {
       let score = 0;
 
       // check for duplicate id
-      let checkDuplicate = setOfUniqueIds.filter(item => item === id);
+      let checkDuplicate = setOfUniqueIds.filter((item) => item === id);
       if (id != checkDuplicate) {
         setOfUniqueIds.push(id);
         let newJokeObject = { id, joke, score };
@@ -94,7 +97,7 @@ export default class DadJokes extends Component {
 
     this.setState({
       jokes: jokeSet,
-      loading: false
+      loading: false,
     });
   }
 
@@ -115,7 +118,7 @@ export default class DadJokes extends Component {
   handleScoreChange(id, direction) {
     const newArray = [...this.state.jokes];
 
-    newArray.map(item => {
+    newArray.map((item) => {
       if (item.id === id) {
         if (direction === "UP") {
           item.score += 1;
@@ -128,7 +131,7 @@ export default class DadJokes extends Component {
 
     newArray.sort((a, b) => (a.score < b.score ? 1 : -1));
     this.setState({
-      jokes: newArray
+      jokes: newArray,
     });
   }
 
@@ -152,7 +155,7 @@ export default class DadJokes extends Component {
 
           <div className="dadJokesBlock">
             <FlipMove>
-              {this.state.jokes.map(j => (
+              {this.state.jokes.map((j) => (
                 <Joke
                   joke={j.joke}
                   key={j.id}
