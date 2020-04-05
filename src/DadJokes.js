@@ -22,22 +22,17 @@ export default class DadJokes extends Component {
 
   componentDidMount() {
     console.log("componentDidMount");
+
     let savedJokes;
 
-    // try {
-    //   savedJokes = JSON.parse(localStorage.getItem("savedJokes"));
-    // } catch (e) {
-    //   console.log("Error = " + e);
-    // }
-
-    savedJokes = JSON.parse(localStorage.getItem("savedJokes"));
     console.log("Checking localstorage....");
-    console.log("savedJokes.length=" + savedJokes.length);
+    console.log("localStorage.length=" + localStorage.length);
 
-    if (savedJokes.length === 0) {
-      console.log("savedJokes = NULL  ");
+    if (localStorage.length <= 1) {
+      console.log("LocalStorage is EMPTY = NULL  ");
       this.makeRequest(0);
     } else {
+      savedJokes = JSON.parse(localStorage.getItem("savedJokes"));
       console.log("savedJokes length = " + savedJokes.length);
       this.setState({
         jokes: savedJokes,
@@ -114,6 +109,7 @@ export default class DadJokes extends Component {
     const savedJokes = JSON.parse(localStorage.getItem("savedJokes"));
 
     this.setState({ jokes: [] });
+    localStorage.removeItem("savedJokes");
   }
 
   handleScoreChange(id, direction) {
