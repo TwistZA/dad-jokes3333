@@ -1,0 +1,95 @@
+.jokeDiv{
+    /* padding: 10px 10px; */
+    width: 700px;
+    height: 70px;
+    font-family: 'Montaga', serif;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(48, 50, 50, 0.75);
+    -moz-box-shadow:    0px 1px 2px 0px rgba(48, 50, 50, 0.75);
+    box-shadow:         0px 1px 2px 0px rgba(48, 50, 50, 0.75);
+    
+    
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    border: 0px solid #000000;
+}
+
+
+.score{
+    padding: 10px 10px;
+    width :1.2em;
+    height: 1.2em;
+
+    margin: 5px 5px;
+    flex-shrink: 0;
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border-style: solid;
+    /* border-color: rgb(56, 139, 139); */
+    
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+
+}
+
+.scoreAbove15{
+    border-color: red
+}
+
+.scoreAbove12{
+    border-color: orange
+}
+.scoreAbove10{
+    border-color: purple
+}
+.scoreAbove8{
+    border-color: blue
+}
+.scoreAbove6{
+    border-color:green
+}
+.scoreAbove4{
+    border-color:yellow
+}
+.scoreAbove2{
+    border-color:rgb(231, 167, 223)
+}
+.scoreBelow2{
+    border-color:brown
+}
+
+
+.jokeText{
+    margin: 5px 15px;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    color: darkslategray;
+    font-size: 15px;
+    width: 600px;
+}
+
+.scoreEmoji{
+    display:flex;
+    font-size: 50px;
+}
+
+i{
+    color:grey;
+    margin: 3px 3px ;
+    margin-left: 8px;
+}
+

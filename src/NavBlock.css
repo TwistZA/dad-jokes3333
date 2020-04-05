@@ -1,0 +1,101 @@
+.navBackground{
+    background-color: purple;
+    padding: 50px 50px;
+    height: 60vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+
+
+    background: rgba(169,3,41,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 43%, rgba(109,0,25,1) 74%, rgba(109,0,25,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(169,3,41,1)), color-stop(43%, rgba(143,2,34,1)), color-stop(74%, rgba(109,0,25,1)), color-stop(100%, rgba(109,0,25,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 43%, rgba(109,0,25,1) 74%, rgba(109,0,25,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 43%, rgba(109,0,25,1) 74%, rgba(109,0,25,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 43%, rgba(109,0,25,1) 74%, rgba(109,0,25,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 43%, rgba(109,0,25,1) 74%, rgba(109,0,25,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+
+    border-radius: 58px 58px 58px 58px;
+    -moz-border-radius: 58px 58px 58px 58px;
+    -webkit-border-radius: 58px 58px 58px 58px;
+    border: 0px solid #000000;
+
+    -webkit-box-shadow: 3px 5px 36px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 5px 36px 12px rgba(0,0,0,0.75);
+    box-shadow: 3px 5px 36px 12px rgba(0,0,0,0.75);
+
+
+
+
+
+
+
+}
+
+
+.navHeader{
+    font-size: 230%;
+    color: wheat;
+}
+
+.DadFont{
+    font-family: 'Spicy Rice', cursive;
+}
+
+.JokesFont{
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 5px;
+}
+
+
+
+.newButton {
+	-moz-box-shadow: 0px 1px 23px 0px #1c1b18;
+	-webkit-box-shadow: 0px 1px 23px 0px #1c1b18;
+	box-shadow: 0px 1px 23px 0px #1c1b18;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
+	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
+	background-color:#eae0c2;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#1e1f1b;
+    font-family: 'Spicy Rice', cursive;
+    font-size:43px;
+    letter-spacing: 2px;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 12px #ffffff;
+}
+.className:newButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
+	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
+	background-color:#ccc2a6;
+}
+.className:newButton:active {
+	position:relative;
+	top:1px;
+}
+
+.navEmoji{
+    font-size: 150px;
+    margin: 10px 10px;
+}
+
+        
