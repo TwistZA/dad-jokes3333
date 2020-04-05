@@ -24,12 +24,13 @@ export default class DadJokes extends Component {
     console.log("componentDidMount");
     let savedJokes;
 
-    try {
-      savedJokes = JSON.parse(localStorage.getItem("savedJokes"));
-    } catch (e) {
-      console.log("Error = " + e);
-    }
+    // try {
+    //   savedJokes = JSON.parse(localStorage.getItem("savedJokes"));
+    // } catch (e) {
+    //   console.log("Error = " + e);
+    // }
 
+    savedJokes = JSON.parse(localStorage.getItem("savedJokes"));
     console.log("Checking localstorage....");
     console.log("savedJokes.length=" + savedJokes.length);
 
