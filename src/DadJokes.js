@@ -28,7 +28,7 @@ export default class DadJokes extends Component {
     console.log("Checking localstorage....");
     console.log("localStorage.length=" + localStorage.length);
 
-    if (localStorage.length <= 1) {
+    if (localStorage.length < 1) {
       console.log("LocalStorage is EMPTY = NULL  ");
       this.makeRequest(0);
     } else {
@@ -142,26 +142,28 @@ export default class DadJokes extends Component {
       );
     } else {
       return (
-        <div className="appBlock">
-          <div>
-            <NavBlock
-              newJokes={this.handleNewJokeButtonClick}
-              clearData={this.handleClearDataClick}
-            />
-          </div>
+        <div className="appBlock container">
+          <div className="row">
+            <div className="col-lg">
+              <NavBlock
+                newJokes={this.handleNewJokeButtonClick}
+                clearData={this.handleClearDataClick}
+              />
+            </div>
 
-          <div className="dadJokesBlock">
-            <FlipMove>
-              {this.state.jokes.map((j) => (
-                <Joke
-                  joke={j.joke}
-                  key={j.id}
-                  score={j.score}
-                  scoreChange={this.handleScoreChange}
-                  id={j.id}
-                />
-              ))}
-            </FlipMove>
+            <div className="dadJokesBlock col-lg">
+              <FlipMove>
+                {this.state.jokes.map((j) => (
+                  <Joke
+                    joke={j.joke}
+                    key={j.id}
+                    score={j.score}
+                    scoreChange={this.handleScoreChange}
+                    id={j.id}
+                  />
+                ))}
+              </FlipMove>
+            </div>
           </div>
         </div>
       );

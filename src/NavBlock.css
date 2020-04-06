@@ -1,12 +1,13 @@
 .navBackground{
     background-color: purple;
     padding: 50px 50px;
-    height: 60vh;
+    /* height: 60vh; */
     text-align: center;
     justify-content: center;
     align-items: center;
     display:flex;
     flex-direction: column;
+    margin: auto auto;
 
 
     background: rgba(169,3,41,1);
