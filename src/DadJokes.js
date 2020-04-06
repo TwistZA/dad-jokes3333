@@ -52,7 +52,6 @@ export default class DadJokes extends Component {
   async makeRequest(currentSize) {
     let res;
     let jokeSet = Array.from(this.state.jokes);
-    let newUniqueList;
     let setOfUniqueIds;
 
     setOfUniqueIds = Array.from(
@@ -106,8 +105,6 @@ export default class DadJokes extends Component {
     console.log("handleClearDataClick");
     localStorage.clear();
 
-    const savedJokes = JSON.parse(localStorage.getItem("savedJokes"));
-
     this.setState({ jokes: [] });
     localStorage.removeItem("savedJokes");
   }
@@ -126,7 +123,12 @@ export default class DadJokes extends Component {
       return item;
     });
 
-    newArray.sort((a, b) => (a.score < b.score ? 1 : -1));
+    // newArray.sort((a, b) => (a.score < b.score ? 1 : -1));
+
+    newArray.sort(function (a, b) {
+      return b["score"] - a["score"] || a["id"] - b["id"];
+    });
+
     this.setState({
       jokes: newArray,
     });
@@ -136,7 +138,9 @@ export default class DadJokes extends Component {
     if (this.state.loading === true) {
       return (
         <div className="loadingContainer">
-          <div className="loadingEmoji">🤣</div>
+          <span className="loadingEmoji" role="img" aria-label="joy">
+            🤣
+          </span>
           <div className="loadingText">Loading</div>
         </div>
       );
